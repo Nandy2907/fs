@@ -254,7 +254,7 @@ ________________________________________________________________________________
 			
 		>  nano script.sh
 		 	tar cvf archive.tar.xz local
-			scp archive.tar.xz pglab@remoteuserip summa.tar.xz
+			scp "archive.tar.xz" "pglab@remoteuserip":"summa.tar.xz"
 			ssh pglab@remoteuserip "tar xf summa.tar.xz"
 		press ctrl+x
 		press y
