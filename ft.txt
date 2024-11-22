@@ -247,13 +247,15 @@ http://localhost:5000 --- check op
 ____________________________________________________________________________________________________________________________________________________________________________________________
 
 6. SSH app data transfer
-
-  ==create a text file "file.txt" in home
+  ==create a folder named local in your system
+  ==cd to that folder and create a text file "file.txt" in home
+  ==come out of the folder using cd ..
   ==open terminal in home and type 
 			
 		>  nano script.sh
-		 
-			scp file.txt pglab@remoteuserip summa.txt
+		 	tar cvf archive.tar.xz local
+			scp archive.tar.xz pglab@remoteuserip summa.tar.xz
+			ssh pglab@remoteuserip "tar xf summa.tar.xz"
 		press ctrl+x
 		press y
 		press enter
